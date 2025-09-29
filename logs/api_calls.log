@@ -1,0 +1,432 @@
+2025-09-29 11:12:10.097 | INFO     | utils.api_handlers:_initialize_clients:107 - ✓ OpenAI client initialized successfully
+2025-09-29 11:12:10.109 | INFO     | utils.api_handlers:_initialize_clients:132 - ✓ Anthropic client initialized successfully
+2025-09-29 11:12:10.109 | INFO     | utils.api_handlers:_initialize_clients:147 - ✓ Google client initialized successfully
+2025-09-29 11:12:13.672 | INFO     | utils.api_handlers:_log_call:318 - API call: gpt-4 | 3.56s | 67 chars
+2025-09-29 11:12:13.673 | INFO     | utils.api_handlers:test_all_apis:337 - OpenAI test: SUCCESS - equal to the logarithm (base 2) of the number of p
+2025-09-29 11:12:18.829 | INFO     | utils.api_handlers:_log_call:318 - API call: claude-3-sonnet | 5.15s | 522 chars
+2025-09-29 11:12:18.829 | INFO     | utils.api_handlers:test_all_apis:351 - Anthropic test: SUCCESS - The Shannon entropy of a uniform distribution with
+2025-09-29 11:12:19.611 | ERROR    | utils.api_handlers:query:199 - API call failed for gemini-pro: 404 models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-09-29 11:12:23.755 | ERROR    | utils.api_handlers:query:199 - API call failed for gemini-pro: 404 models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-09-29 11:12:27.884 | ERROR    | utils.api_handlers:query:199 - API call failed for gemini-pro: 404 models/gemini-1.5-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-09-29 11:12:27.886 | ERROR    | utils.api_handlers:test_all_apis:367 - Google test failed: RetryError[<Future at 0x1520550d0 state=finished raised NotFound>]
+2025-09-29 11:12:31.175 | INFO     | utils.api_handlers:_log_call:318 - API call: gpt-4 | 2.22s | 83 chars
+2025-09-29 11:12:31.177 | INFO     | utils.api_handlers:save_history:325 - Saved 3 API calls to logs/test_history.json
+2025-09-29 11:18:28.879 | INFO     | __main__:_initialize_clients:94 - ✓ OpenAI client initialized successfully
+2025-09-29 11:18:28.890 | INFO     | __main__:_initialize_clients:116 - ✓ Anthropic client initialized successfully
+2025-09-29 11:18:29.387 | INFO     | __main__:_initialize_clients:131 - Available Google models: ['models/embedding-gecko-001', 'models/gemini-2.5-pro-preview-03-25', 'models/gemini-2.5-flash-preview-05-20', 'models/gemini-2.5-flash', 'models/gemini-2.5-flash-lite-preview-06-17', 'models/gemini-2.5-pro-preview-05-06', 'models/gemini-2.5-pro-preview-06-05', 'models/gemini-2.5-pro', 'models/gemini-2.0-flash-exp', 'models/gemini-2.0-flash', 'models/gemini-2.0-flash-001', 'models/gemini-2.0-flash-exp-image-generation', 'models/gemini-2.0-flash-lite-001', 'models/gemini-2.0-flash-lite', 'models/gemini-2.0-flash-preview-image-generation', 'models/gemini-2.0-flash-lite-preview-02-05', 'models/gemini-2.0-flash-lite-preview', 'models/gemini-2.0-pro-exp', 'models/gemini-2.0-pro-exp-02-05', 'models/gemini-exp-1206', 'models/gemini-2.0-flash-thinking-exp-01-21', 'models/gemini-2.0-flash-thinking-exp', 'models/gemini-2.0-flash-thinking-exp-1219', 'models/gemini-2.5-flash-preview-tts', 'models/gemini-2.5-pro-preview-tts', 'models/learnlm-2.0-flash-experimental', 'models/gemma-3-1b-it', 'models/gemma-3-4b-it', 'models/gemma-3-12b-it', 'models/gemma-3-27b-it', 'models/gemma-3n-e4b-it', 'models/gemma-3n-e2b-it', 'models/gemini-flash-latest', 'models/gemini-flash-lite-latest', 'models/gemini-pro-latest', 'models/gemini-2.5-flash-lite', 'models/gemini-2.5-flash-image-preview', 'models/gemini-2.5-flash-preview-09-2025', 'models/gemini-2.5-flash-lite-preview-09-2025', 'models/gemini-robotics-er-1.5-preview', 'models/embedding-001', 'models/text-embedding-004', 'models/gemini-embedding-exp-03-07', 'models/gemini-embedding-exp', 'models/gemini-embedding-001', 'models/aqa', 'models/imagen-3.0-generate-002', 'models/imagen-4.0-generate-preview-06-06', 'models/imagen-4.0-ultra-generate-preview-06-06', 'models/imagen-4.0-generate-001', 'models/imagen-4.0-ultra-generate-001', 'models/imagen-4.0-fast-generate-001', 'models/veo-2.0-generate-001', 'models/veo-3.0-generate-preview', 'models/veo-3.0-fast-generate-preview', 'models/veo-3.0-generate-001', 'models/veo-3.0-fast-generate-001', 'models/gemini-2.5-flash-preview-native-audio-dialog', 'models/gemini-2.5-flash-exp-native-audio-thinking-dialog', 'models/gemini-2.0-flash-live-001', 'models/gemini-live-2.5-flash-preview', 'models/gemini-2.5-flash-live-preview', 'models/gemini-2.5-flash-native-audio-latest', 'models/gemini-2.5-flash-native-audio-preview-09-2025']
+2025-09-29 11:18:29.388 | INFO     | __main__:_initialize_clients:135 - ✓ Google client initialized successfully with gemini-pro
+2025-09-29 11:18:32.087 | INFO     | __main__:_log_call:313 - API call: gpt-4 | 2.70s | 67 chars
+2025-09-29 11:18:32.088 | INFO     | __main__:test_all_apis:332 - OpenAI test: SUCCESS - equal to the logarithm (base 2) of the number of p
+2025-09-29 11:18:35.271 | INFO     | __main__:_log_call:313 - API call: claude-3-sonnet | 3.18s | 414 chars
+2025-09-29 11:18:35.272 | INFO     | __main__:test_all_apis:344 - Anthropic test: SUCCESS - The Shannon entropy of a uniform distribution with
+2025-09-29 11:18:35.585 | ERROR    | __main__:_query_google:292 - Google API error: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-09-29 11:18:35.712 | ERROR    | __main__:query:186 - API call failed for gemini-pro: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-09-29 11:18:39.854 | ERROR    | __main__:_query_google:292 - Google API error: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-09-29 11:18:40.073 | ERROR    | __main__:query:186 - API call failed for gemini-pro: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-09-29 11:18:44.244 | ERROR    | __main__:_query_google:292 - Google API error: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-09-29 11:18:44.384 | ERROR    | __main__:query:186 - API call failed for gemini-pro: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2025-09-29 11:18:44.384 | ERROR    | __main__:test_all_apis:359 - Google test failed: RetryError[<Future at 0x1068e99a0 state=finished raised NotFound>]
+2025-09-29 11:18:44.392 | ERROR    | __main__:test_all_apis:360 - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hillarylevinson/Desktop/recursive-reality/utils/api_handlers.py", line 174, in query
+    response = await self._query_google(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hillarylevinson/Desktop/recursive-reality/utils/api_handlers.py", line 294, in _query_google
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 827, in generate_content
+    response = rpc(
+               ^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hillarylevinson/Desktop/recursive-reality/utils/api_handlers.py", line 354, in test_all_apis
+    response = await self.query('gemini-pro', test_prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 419, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x1068e99a0 state=finished raised NotFound>]
+
+2025-09-29 11:35:56.540 | INFO     | utils.api_handlers:_initialize_clients:94 - ✓ OpenAI client initialized successfully
+2025-09-29 11:35:56.550 | INFO     | utils.api_handlers:_initialize_clients:116 - ✓ Anthropic client initialized successfully
+2025-09-29 11:35:57.484 | INFO     | utils.api_handlers:_initialize_clients:131 - Available Google models: ['models/embedding-gecko-001', 'models/gemini-2.5-pro-preview-03-25', 'models/gemini-2.5-flash-preview-05-20', 'models/gemini-2.5-flash', 'models/gemini-2.5-flash-lite-preview-06-17', 'models/gemini-2.5-pro-preview-05-06', 'models/gemini-2.5-pro-preview-06-05', 'models/gemini-2.5-pro', 'models/gemini-2.0-flash-exp', 'models/gemini-2.0-flash', 'models/gemini-2.0-flash-001', 'models/gemini-2.0-flash-exp-image-generation', 'models/gemini-2.0-flash-lite-001', 'models/gemini-2.0-flash-lite', 'models/gemini-2.0-flash-preview-image-generation', 'models/gemini-2.0-flash-lite-preview-02-05', 'models/gemini-2.0-flash-lite-preview', 'models/gemini-2.0-pro-exp', 'models/gemini-2.0-pro-exp-02-05', 'models/gemini-exp-1206', 'models/gemini-2.0-flash-thinking-exp-01-21', 'models/gemini-2.0-flash-thinking-exp', 'models/gemini-2.0-flash-thinking-exp-1219', 'models/gemini-2.5-flash-preview-tts', 'models/gemini-2.5-pro-preview-tts', 'models/learnlm-2.0-flash-experimental', 'models/gemma-3-1b-it', 'models/gemma-3-4b-it', 'models/gemma-3-12b-it', 'models/gemma-3-27b-it', 'models/gemma-3n-e4b-it', 'models/gemma-3n-e2b-it', 'models/gemini-flash-latest', 'models/gemini-flash-lite-latest', 'models/gemini-pro-latest', 'models/gemini-2.5-flash-lite', 'models/gemini-2.5-flash-image-preview', 'models/gemini-2.5-flash-preview-09-2025', 'models/gemini-2.5-flash-lite-preview-09-2025', 'models/gemini-robotics-er-1.5-preview', 'models/embedding-001', 'models/text-embedding-004', 'models/gemini-embedding-exp-03-07', 'models/gemini-embedding-exp', 'models/gemini-embedding-001', 'models/aqa', 'models/imagen-3.0-generate-002', 'models/imagen-4.0-generate-preview-06-06', 'models/imagen-4.0-ultra-generate-preview-06-06', 'models/imagen-4.0-generate-001', 'models/imagen-4.0-ultra-generate-001', 'models/imagen-4.0-fast-generate-001', 'models/veo-2.0-generate-001', 'models/veo-3.0-generate-preview', 'models/veo-3.0-fast-generate-preview', 'models/veo-3.0-generate-001', 'models/veo-3.0-fast-generate-001', 'models/gemini-2.5-flash-preview-native-audio-dialog', 'models/gemini-2.5-flash-exp-native-audio-thinking-dialog', 'models/gemini-2.0-flash-live-001', 'models/gemini-live-2.5-flash-preview', 'models/gemini-2.5-flash-live-preview', 'models/gemini-2.5-flash-native-audio-latest', 'models/gemini-2.5-flash-native-audio-preview-09-2025']
+2025-09-29 11:35:57.486 | INFO     | utils.api_handlers:_initialize_clients:135 - ✓ Google client initialized successfully with gemini-2.5-flash
+2025-09-29 11:35:58.483 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 1.00s | 9 chars
+2025-09-29 11:36:11.943 | INFO     | __main__:_initialize_clients:94 - ✓ OpenAI client initialized successfully
+2025-09-29 11:36:11.953 | INFO     | __main__:_initialize_clients:116 - ✓ Anthropic client initialized successfully
+2025-09-29 11:36:12.526 | INFO     | __main__:_initialize_clients:131 - Available Google models: ['models/embedding-gecko-001', 'models/gemini-2.5-pro-preview-03-25', 'models/gemini-2.5-flash-preview-05-20', 'models/gemini-2.5-flash', 'models/gemini-2.5-flash-lite-preview-06-17', 'models/gemini-2.5-pro-preview-05-06', 'models/gemini-2.5-pro-preview-06-05', 'models/gemini-2.5-pro', 'models/gemini-2.0-flash-exp', 'models/gemini-2.0-flash', 'models/gemini-2.0-flash-001', 'models/gemini-2.0-flash-exp-image-generation', 'models/gemini-2.0-flash-lite-001', 'models/gemini-2.0-flash-lite', 'models/gemini-2.0-flash-preview-image-generation', 'models/gemini-2.0-flash-lite-preview-02-05', 'models/gemini-2.0-flash-lite-preview', 'models/gemini-2.0-pro-exp', 'models/gemini-2.0-pro-exp-02-05', 'models/gemini-exp-1206', 'models/gemini-2.0-flash-thinking-exp-01-21', 'models/gemini-2.0-flash-thinking-exp', 'models/gemini-2.0-flash-thinking-exp-1219', 'models/gemini-2.5-flash-preview-tts', 'models/gemini-2.5-pro-preview-tts', 'models/learnlm-2.0-flash-experimental', 'models/gemma-3-1b-it', 'models/gemma-3-4b-it', 'models/gemma-3-12b-it', 'models/gemma-3-27b-it', 'models/gemma-3n-e4b-it', 'models/gemma-3n-e2b-it', 'models/gemini-flash-latest', 'models/gemini-flash-lite-latest', 'models/gemini-pro-latest', 'models/gemini-2.5-flash-lite', 'models/gemini-2.5-flash-image-preview', 'models/gemini-2.5-flash-preview-09-2025', 'models/gemini-2.5-flash-lite-preview-09-2025', 'models/gemini-robotics-er-1.5-preview', 'models/embedding-001', 'models/text-embedding-004', 'models/gemini-embedding-exp-03-07', 'models/gemini-embedding-exp', 'models/gemini-embedding-001', 'models/aqa', 'models/imagen-3.0-generate-002', 'models/imagen-4.0-generate-preview-06-06', 'models/imagen-4.0-ultra-generate-preview-06-06', 'models/imagen-4.0-generate-001', 'models/imagen-4.0-ultra-generate-001', 'models/imagen-4.0-fast-generate-001', 'models/veo-2.0-generate-001', 'models/veo-3.0-generate-preview', 'models/veo-3.0-fast-generate-preview', 'models/veo-3.0-generate-001', 'models/veo-3.0-fast-generate-001', 'models/gemini-2.5-flash-preview-native-audio-dialog', 'models/gemini-2.5-flash-exp-native-audio-thinking-dialog', 'models/gemini-2.0-flash-live-001', 'models/gemini-live-2.5-flash-preview', 'models/gemini-2.5-flash-live-preview', 'models/gemini-2.5-flash-native-audio-latest', 'models/gemini-2.5-flash-native-audio-preview-09-2025']
+2025-09-29 11:36:12.527 | INFO     | __main__:_initialize_clients:135 - ✓ Google client initialized successfully with gemini-2.5-flash
+2025-09-29 11:36:15.074 | INFO     | __main__:_log_call:313 - API call: gpt-4 | 2.55s | 67 chars
+2025-09-29 11:36:15.074 | INFO     | __main__:test_all_apis:332 - OpenAI test: SUCCESS - equal to the logarithm (base 2) of the number of p
+2025-09-29 11:36:19.067 | INFO     | __main__:_log_call:313 - API call: claude-3-sonnet | 3.99s | 490 chars
+2025-09-29 11:36:19.067 | INFO     | __main__:test_all_apis:344 - Anthropic test: SUCCESS - The Shannon entropy of a uniform distribution is l
+2025-09-29 11:36:25.202 | INFO     | __main__:_log_call:313 - API call: gemini-2.5-flash | 6.13s | 405 chars
+2025-09-29 11:36:25.202 | INFO     | __main__:test_all_apis:356 - Google test: SUCCESS - ...**its maximum possible value** (for a given num
+2025-09-29 11:43:10.766 | INFO     | utils.metrics:<module>:98 - Metrics module loaded - using established NLP evaluation methods
+2025-09-29 11:43:10.804 | INFO     | utils.api_handlers:_initialize_clients:94 - ✓ OpenAI client initialized successfully
+2025-09-29 11:43:10.818 | INFO     | utils.api_handlers:_initialize_clients:116 - ✓ Anthropic client initialized successfully
+2025-09-29 11:43:11.879 | INFO     | utils.api_handlers:_initialize_clients:131 - Available Google models: ['models/embedding-gecko-001', 'models/gemini-2.5-pro-preview-03-25', 'models/gemini-2.5-flash-preview-05-20', 'models/gemini-2.5-flash', 'models/gemini-2.5-flash-lite-preview-06-17', 'models/gemini-2.5-pro-preview-05-06', 'models/gemini-2.5-pro-preview-06-05', 'models/gemini-2.5-pro', 'models/gemini-2.0-flash-exp', 'models/gemini-2.0-flash', 'models/gemini-2.0-flash-001', 'models/gemini-2.0-flash-exp-image-generation', 'models/gemini-2.0-flash-lite-001', 'models/gemini-2.0-flash-lite', 'models/gemini-2.0-flash-preview-image-generation', 'models/gemini-2.0-flash-lite-preview-02-05', 'models/gemini-2.0-flash-lite-preview', 'models/gemini-2.0-pro-exp', 'models/gemini-2.0-pro-exp-02-05', 'models/gemini-exp-1206', 'models/gemini-2.0-flash-thinking-exp-01-21', 'models/gemini-2.0-flash-thinking-exp', 'models/gemini-2.0-flash-thinking-exp-1219', 'models/gemini-2.5-flash-preview-tts', 'models/gemini-2.5-pro-preview-tts', 'models/learnlm-2.0-flash-experimental', 'models/gemma-3-1b-it', 'models/gemma-3-4b-it', 'models/gemma-3-12b-it', 'models/gemma-3-27b-it', 'models/gemma-3n-e4b-it', 'models/gemma-3n-e2b-it', 'models/gemini-flash-latest', 'models/gemini-flash-lite-latest', 'models/gemini-pro-latest', 'models/gemini-2.5-flash-lite', 'models/gemini-2.5-flash-image-preview', 'models/gemini-2.5-flash-preview-09-2025', 'models/gemini-2.5-flash-lite-preview-09-2025', 'models/gemini-robotics-er-1.5-preview', 'models/embedding-001', 'models/text-embedding-004', 'models/gemini-embedding-exp-03-07', 'models/gemini-embedding-exp', 'models/gemini-embedding-001', 'models/aqa', 'models/imagen-3.0-generate-002', 'models/imagen-4.0-generate-preview-06-06', 'models/imagen-4.0-ultra-generate-preview-06-06', 'models/imagen-4.0-generate-001', 'models/imagen-4.0-ultra-generate-001', 'models/imagen-4.0-fast-generate-001', 'models/veo-2.0-generate-001', 'models/veo-3.0-generate-preview', 'models/veo-3.0-fast-generate-preview', 'models/veo-3.0-generate-001', 'models/veo-3.0-fast-generate-001', 'models/gemini-2.5-flash-preview-native-audio-dialog', 'models/gemini-2.5-flash-exp-native-audio-thinking-dialog', 'models/gemini-2.0-flash-live-001', 'models/gemini-live-2.5-flash-preview', 'models/gemini-2.5-flash-live-preview', 'models/gemini-2.5-flash-native-audio-latest', 'models/gemini-2.5-flash-native-audio-preview-09-2025']
+2025-09-29 11:43:11.880 | INFO     | utils.api_handlers:_initialize_clients:135 - ✓ Google client initialized successfully with gemini-2.5-flash
+2025-09-29 11:43:11.881 | INFO     | __main__:__init__:43 - Initialized experiment: n_facts=10, n_layers=5, pilot=True
+2025-09-29 11:43:11.881 | INFO     | __main__:run_experiment:104 - Starting degradation experiment
+2025-09-29 11:43:11.895 | INFO     | __main__:load_ground_truth:53 - Pilot mode: Using 10 facts
+2025-09-29 11:43:11.895 | INFO     | __main__:run_experiment:117 - Processing fact 1/10
+2025-09-29 11:43:14.001 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.11s | 78 chars
+2025-09-29 11:43:14.002 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gpt-4, Layer 1 complete
+2025-09-29 11:43:16.556 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.55s | 70 chars
+2025-09-29 11:43:16.557 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gpt-4, Layer 2 complete
+2025-09-29 11:43:19.307 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.75s | 93 chars
+2025-09-29 11:43:19.309 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gpt-4, Layer 3 complete
+2025-09-29 11:43:21.036 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.73s | 84 chars
+2025-09-29 11:43:21.037 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gpt-4, Layer 4 complete
+2025-09-29 11:43:22.966 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.93s | 79 chars
+2025-09-29 11:43:22.968 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gpt-4, Layer 5 complete
+2025-09-29 11:43:26.379 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.91s | 212 chars
+2025-09-29 11:43:26.380 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:43:28.830 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.45s | 249 chars
+2025-09-29 11:43:28.831 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:43:30.673 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 1.84s | 285 chars
+2025-09-29 11:43:30.674 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:43:33.196 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.52s | 323 chars
+2025-09-29 11:43:33.197 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:43:35.832 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.63s | 466 chars
+2025-09-29 11:43:35.833 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:43:45.725 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 9.39s | 107 chars
+2025-09-29 11:43:45.726 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:43:54.633 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.91s | 462 chars
+2025-09-29 11:43:54.634 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:44:01.392 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 6.76s | 135 chars
+2025-09-29 11:44:01.393 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:44:08.764 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.37s | 180 chars
+2025-09-29 11:44:08.765 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:44:17.980 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 9.21s | 228 chars
+2025-09-29 11:44:17.981 | DEBUG    | __main__:run_single_cascade:94 - Fact 1, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:44:18.484 | INFO     | __main__:run_experiment:117 - Processing fact 2/10
+2025-09-29 11:44:21.520 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 3.03s | 150 chars
+2025-09-29 11:44:21.522 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gpt-4, Layer 1 complete
+2025-09-29 11:44:23.434 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.91s | 130 chars
+2025-09-29 11:44:23.435 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gpt-4, Layer 2 complete
+2025-09-29 11:44:25.701 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.27s | 150 chars
+2025-09-29 11:44:25.703 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gpt-4, Layer 3 complete
+2025-09-29 11:44:28.482 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.78s | 130 chars
+2025-09-29 11:44:28.484 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gpt-4, Layer 4 complete
+2025-09-29 11:44:32.728 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 4.24s | 150 chars
+2025-09-29 11:44:32.729 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gpt-4, Layer 5 complete
+2025-09-29 11:44:35.280 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.05s | 313 chars
+2025-09-29 11:44:35.281 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:44:37.558 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.28s | 434 chars
+2025-09-29 11:44:37.559 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:44:40.072 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.51s | 454 chars
+2025-09-29 11:44:40.073 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:44:42.953 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.88s | 625 chars
+2025-09-29 11:44:42.954 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:44:46.162 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.21s | 712 chars
+2025-09-29 11:44:46.163 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:44:54.476 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.81s | 185 chars
+2025-09-29 11:44:54.477 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:45:06.174 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 11.70s | 186 chars
+2025-09-29 11:45:06.176 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:45:17.205 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 11.03s | 801 chars
+2025-09-29 11:45:17.206 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:45:30.086 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 12.88s | 248 chars
+2025-09-29 11:45:30.087 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:45:39.637 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 9.55s | 375 chars
+2025-09-29 11:45:39.638 | DEBUG    | __main__:run_single_cascade:94 - Fact 2, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:45:40.140 | INFO     | __main__:run_experiment:117 - Processing fact 4/10
+2025-09-29 11:45:42.988 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.85s | 109 chars
+2025-09-29 11:45:42.989 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gpt-4, Layer 1 complete
+2025-09-29 11:45:44.920 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.93s | 96 chars
+2025-09-29 11:45:44.921 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gpt-4, Layer 2 complete
+2025-09-29 11:45:47.280 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.36s | 109 chars
+2025-09-29 11:45:47.281 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gpt-4, Layer 3 complete
+2025-09-29 11:45:48.913 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.63s | 96 chars
+2025-09-29 11:45:48.914 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gpt-4, Layer 4 complete
+2025-09-29 11:45:51.218 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.30s | 109 chars
+2025-09-29 11:45:51.219 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gpt-4, Layer 5 complete
+2025-09-29 11:45:54.631 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.91s | 167 chars
+2025-09-29 11:45:54.632 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:45:57.197 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.56s | 279 chars
+2025-09-29 11:45:57.198 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:45:59.359 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.16s | 333 chars
+2025-09-29 11:45:59.359 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:46:01.508 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.15s | 331 chars
+2025-09-29 11:46:01.509 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:46:03.595 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.09s | 365 chars
+2025-09-29 11:46:03.596 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:46:12.258 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.16s | 124 chars
+2025-09-29 11:46:12.260 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:46:20.860 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.60s | 145 chars
+2025-09-29 11:46:20.861 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:46:26.311 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 5.45s | 163 chars
+2025-09-29 11:46:26.312 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:46:33.767 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.45s | 162 chars
+2025-09-29 11:46:33.768 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:46:40.433 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 6.66s | 175 chars
+2025-09-29 11:46:40.434 | DEBUG    | __main__:run_single_cascade:94 - Fact 4, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:46:40.937 | INFO     | __main__:run_experiment:117 - Processing fact 5/10
+2025-09-29 11:46:42.424 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.49s | 132 chars
+2025-09-29 11:46:42.425 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gpt-4, Layer 1 complete
+2025-09-29 11:46:44.260 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.83s | 147 chars
+2025-09-29 11:46:44.261 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gpt-4, Layer 2 complete
+2025-09-29 11:46:47.534 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 3.27s | 146 chars
+2025-09-29 11:46:47.535 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gpt-4, Layer 3 complete
+2025-09-29 11:46:49.036 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.50s | 126 chars
+2025-09-29 11:46:49.037 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gpt-4, Layer 4 complete
+2025-09-29 11:46:50.642 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.60s | 128 chars
+2025-09-29 11:46:50.643 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gpt-4, Layer 5 complete
+2025-09-29 11:46:53.731 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.59s | 192 chars
+2025-09-29 11:46:53.731 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:46:56.711 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.98s | 516 chars
+2025-09-29 11:46:56.712 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:47:00.692 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.98s | 581 chars
+2025-09-29 11:47:00.693 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:47:03.120 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.43s | 388 chars
+2025-09-29 11:47:03.122 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:47:05.680 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.56s | 386 chars
+2025-09-29 11:47:05.681 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:47:18.155 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 11.97s | 164 chars
+2025-09-29 11:47:18.156 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:47:25.197 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.04s | 224 chars
+2025-09-29 11:47:25.198 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:47:37.030 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 11.83s | 271 chars
+2025-09-29 11:47:37.032 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:47:45.669 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.64s | 318 chars
+2025-09-29 11:47:45.670 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:47:53.991 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.32s | 333 chars
+2025-09-29 11:47:53.993 | DEBUG    | __main__:run_single_cascade:94 - Fact 5, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:47:54.495 | INFO     | __main__:run_experiment:117 - Processing fact 7/10
+2025-09-29 11:47:55.912 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.42s | 78 chars
+2025-09-29 11:47:55.913 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gpt-4, Layer 1 complete
+2025-09-29 11:47:58.020 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.11s | 103 chars
+2025-09-29 11:47:58.021 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gpt-4, Layer 2 complete
+2025-09-29 11:48:00.396 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.37s | 104 chars
+2025-09-29 11:48:00.397 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gpt-4, Layer 3 complete
+2025-09-29 11:48:01.530 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.13s | 81 chars
+2025-09-29 11:48:01.530 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gpt-4, Layer 4 complete
+2025-09-29 11:48:03.272 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.67s | 94 chars
+2025-09-29 11:48:03.273 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gpt-4, Layer 5 complete
+2025-09-29 11:48:05.676 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 1.90s | 217 chars
+2025-09-29 11:48:05.677 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:48:07.458 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 1.78s | 213 chars
+2025-09-29 11:48:07.459 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:48:11.589 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 4.13s | 310 chars
+2025-09-29 11:48:11.590 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:48:14.528 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.94s | 409 chars
+2025-09-29 11:48:14.529 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:48:18.519 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.99s | 529 chars
+2025-09-29 11:48:18.520 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:48:26.959 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.94s | 127 chars
+2025-09-29 11:48:26.961 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:48:34.593 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.63s | 501 chars
+2025-09-29 11:48:34.595 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:48:40.945 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 6.35s | 145 chars
+2025-09-29 11:48:40.946 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:48:46.827 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 5.88s | 126 chars
+2025-09-29 11:48:46.828 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:48:53.539 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 6.71s | 589 chars
+2025-09-29 11:48:53.540 | DEBUG    | __main__:run_single_cascade:94 - Fact 7, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:48:54.041 | INFO     | __main__:run_experiment:117 - Processing fact 8/10
+2025-09-29 11:48:55.494 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.45s | 104 chars
+2025-09-29 11:48:55.496 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gpt-4, Layer 1 complete
+2025-09-29 11:48:56.913 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.42s | 96 chars
+2025-09-29 11:48:56.915 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gpt-4, Layer 2 complete
+2025-09-29 11:48:58.026 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.11s | 110 chars
+2025-09-29 11:48:58.027 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gpt-4, Layer 3 complete
+2025-09-29 11:48:59.377 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.26s | 108 chars
+2025-09-29 11:48:59.378 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gpt-4, Layer 4 complete
+2025-09-29 11:49:01.222 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.84s | 120 chars
+2025-09-29 11:49:01.223 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gpt-4, Layer 5 complete
+2025-09-29 11:49:04.098 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.37s | 291 chars
+2025-09-29 11:49:04.100 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:49:07.269 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.17s | 407 chars
+2025-09-29 11:49:07.270 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:49:11.439 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 4.17s | 680 chars
+2025-09-29 11:49:11.441 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:49:16.579 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 5.14s | 838 chars
+2025-09-29 11:49:16.581 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:49:21.187 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 4.61s | 919 chars
+2025-09-29 11:49:21.188 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:49:29.033 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.34s | 752 chars
+2025-09-29 11:49:29.035 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:49:37.162 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.13s | 178 chars
+2025-09-29 11:49:37.163 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:49:45.606 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.44s | 717 chars
+2025-09-29 11:49:45.608 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:49:52.671 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.06s | 220 chars
+2025-09-29 11:49:52.672 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:50:00.072 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.40s | 234 chars
+2025-09-29 11:50:00.073 | DEBUG    | __main__:run_single_cascade:94 - Fact 8, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:50:00.576 | INFO     | __main__:run_experiment:117 - Processing fact 10/10
+2025-09-29 11:50:01.785 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.21s | 69 chars
+2025-09-29 11:50:01.786 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gpt-4, Layer 1 complete
+2025-09-29 11:50:03.253 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.47s | 112 chars
+2025-09-29 11:50:03.254 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gpt-4, Layer 2 complete
+2025-09-29 11:50:05.087 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.83s | 124 chars
+2025-09-29 11:50:05.088 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gpt-4, Layer 3 complete
+2025-09-29 11:50:06.526 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.44s | 146 chars
+2025-09-29 11:50:06.527 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gpt-4, Layer 4 complete
+2025-09-29 11:50:09.037 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.51s | 152 chars
+2025-09-29 11:50:09.038 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gpt-4, Layer 5 complete
+2025-09-29 11:50:12.492 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.95s | 247 chars
+2025-09-29 11:50:12.494 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:50:15.422 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.93s | 494 chars
+2025-09-29 11:50:15.423 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:50:18.605 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.18s | 595 chars
+2025-09-29 11:50:18.606 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:50:22.791 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 4.18s | 780 chars
+2025-09-29 11:50:22.792 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:50:27.912 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 5.12s | 858 chars
+2025-09-29 11:50:27.913 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:50:38.293 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 9.88s | 229 chars
+2025-09-29 11:50:38.295 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:50:47.439 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 9.14s | 354 chars
+2025-09-29 11:50:47.441 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:50:54.808 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.37s | 517 chars
+2025-09-29 11:50:54.809 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:51:02.164 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.35s | 347 chars
+2025-09-29 11:51:02.165 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:51:11.116 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.95s | 410 chars
+2025-09-29 11:51:11.117 | DEBUG    | __main__:run_single_cascade:94 - Fact 10, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:51:11.620 | INFO     | __main__:run_experiment:117 - Processing fact 11/10
+2025-09-29 11:51:13.623 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.00s | 104 chars
+2025-09-29 11:51:13.624 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gpt-4, Layer 1 complete
+2025-09-29 11:51:15.131 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.51s | 111 chars
+2025-09-29 11:51:15.132 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gpt-4, Layer 2 complete
+2025-09-29 11:51:16.388 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.26s | 97 chars
+2025-09-29 11:51:16.389 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gpt-4, Layer 3 complete
+2025-09-29 11:51:18.845 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.46s | 102 chars
+2025-09-29 11:51:18.846 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gpt-4, Layer 4 complete
+2025-09-29 11:51:20.419 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.57s | 97 chars
+2025-09-29 11:51:20.420 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gpt-4, Layer 5 complete
+2025-09-29 11:51:24.069 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.15s | 174 chars
+2025-09-29 11:51:24.070 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:51:28.714 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 4.64s | 526 chars
+2025-09-29 11:51:28.716 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:51:34.167 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 5.45s | 627 chars
+2025-09-29 11:51:34.168 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:51:39.912 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 5.74s | 773 chars
+2025-09-29 11:51:39.913 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:51:45.572 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 5.66s | 829 chars
+2025-09-29 11:51:45.573 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:51:53.994 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.92s | 114 chars
+2025-09-29 11:51:53.994 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:52:02.435 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.44s | 132 chars
+2025-09-29 11:52:02.437 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:52:09.531 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.09s | 114 chars
+2025-09-29 11:52:09.532 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:52:15.664 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 6.13s | 124 chars
+2025-09-29 11:52:15.666 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:52:22.161 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 6.49s | 124 chars
+2025-09-29 11:52:22.162 | DEBUG    | __main__:run_single_cascade:94 - Fact 11, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:52:22.665 | INFO     | __main__:run_experiment:117 - Processing fact 13/10
+2025-09-29 11:52:24.587 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.92s | 80 chars
+2025-09-29 11:52:24.588 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gpt-4, Layer 1 complete
+2025-09-29 11:52:26.431 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.84s | 100 chars
+2025-09-29 11:52:26.433 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gpt-4, Layer 2 complete
+2025-09-29 11:52:27.935 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.50s | 105 chars
+2025-09-29 11:52:27.936 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gpt-4, Layer 3 complete
+2025-09-29 11:52:29.190 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.25s | 90 chars
+2025-09-29 11:52:29.191 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gpt-4, Layer 4 complete
+2025-09-29 11:52:31.112 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.92s | 108 chars
+2025-09-29 11:52:31.113 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gpt-4, Layer 5 complete
+2025-09-29 11:52:34.725 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.11s | 192 chars
+2025-09-29 11:52:34.727 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:52:38.412 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.68s | 447 chars
+2025-09-29 11:52:38.413 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:52:42.311 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.90s | 511 chars
+2025-09-29 11:52:42.312 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:52:46.533 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 4.22s | 528 chars
+2025-09-29 11:52:46.534 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:52:50.390 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.86s | 624 chars
+2025-09-29 11:52:50.392 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:52:59.563 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.67s | 611 chars
+2025-09-29 11:52:59.564 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:53:06.948 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.38s | 97 chars
+2025-09-29 11:53:06.950 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:53:14.045 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.09s | 430 chars
+2025-09-29 11:53:14.046 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:53:21.631 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.58s | 112 chars
+2025-09-29 11:53:21.632 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:53:32.475 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 10.84s | 111 chars
+2025-09-29 11:53:32.477 | DEBUG    | __main__:run_single_cascade:94 - Fact 13, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:53:32.978 | INFO     | __main__:run_experiment:117 - Processing fact 14/10
+2025-09-29 11:53:35.832 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.85s | 105 chars
+2025-09-29 11:53:35.833 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gpt-4, Layer 1 complete
+2025-09-29 11:53:38.994 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 3.16s | 112 chars
+2025-09-29 11:53:38.995 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gpt-4, Layer 2 complete
+2025-09-29 11:53:40.465 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.47s | 132 chars
+2025-09-29 11:53:40.466 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gpt-4, Layer 3 complete
+2025-09-29 11:53:42.308 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.84s | 134 chars
+2025-09-29 11:53:42.309 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gpt-4, Layer 4 complete
+2025-09-29 11:53:44.453 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.14s | 123 chars
+2025-09-29 11:53:44.454 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gpt-4, Layer 5 complete
+2025-09-29 11:53:47.069 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.11s | 183 chars
+2025-09-29 11:53:47.069 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model claude-3-5-sonnet-20241022, Layer 1 complete
+2025-09-29 11:53:49.535 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.46s | 406 chars
+2025-09-29 11:53:49.535 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model claude-3-5-sonnet-20241022, Layer 2 complete
+2025-09-29 11:53:52.139 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.60s | 474 chars
+2025-09-29 11:53:52.141 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model claude-3-5-sonnet-20241022, Layer 3 complete
+2025-09-29 11:53:54.631 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.49s | 483 chars
+2025-09-29 11:53:54.632 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model claude-3-5-sonnet-20241022, Layer 4 complete
+2025-09-29 11:53:58.477 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.84s | 489 chars
+2025-09-29 11:53:58.478 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model claude-3-5-sonnet-20241022, Layer 5 complete
+2025-09-29 11:54:06.575 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.59s | 189 chars
+2025-09-29 11:54:06.577 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gemini-2.5-flash, Layer 1 complete
+2025-09-29 11:54:13.947 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.37s | 201 chars
+2025-09-29 11:54:13.948 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gemini-2.5-flash, Layer 2 complete
+2025-09-29 11:54:21.169 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.22s | 187 chars
+2025-09-29 11:54:21.170 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gemini-2.5-flash, Layer 3 complete
+2025-09-29 11:54:28.079 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 6.91s | 226 chars
+2025-09-29 11:54:28.080 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gemini-2.5-flash, Layer 4 complete
+2025-09-29 11:54:36.951 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.87s | 199 chars
+2025-09-29 11:54:36.952 | DEBUG    | __main__:run_single_cascade:94 - Fact 14, Model gemini-2.5-flash, Layer 5 complete
+2025-09-29 11:54:37.460 | INFO     | __main__:save_results:142 - Results saved to experiments/exp1_degradation/results/degradation_pilot_20250929_115437.json
+2025-09-29 11:54:37.474 | INFO     | __main__:save_results:149 - CSV saved to experiments/exp1_degradation/results/degradation_pilot_20250929_115437.csv
+2025-09-29 11:54:37.475 | INFO     | __main__:save_results:153 - Total data points: 150
+2025-09-29 11:54:37.476 | INFO     | __main__:save_results:154 - Models tested: ['gpt-4' 'claude-3-5-sonnet-20241022' 'gemini-2.5-flash']
+2025-09-29 11:54:37.476 | INFO     | __main__:save_results:155 - Layers completed: 5
+2025-09-29 11:54:37.477 | INFO     | __main__:main:175 - Experiment complete!

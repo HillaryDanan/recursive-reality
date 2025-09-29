@@ -1,18 +1,19 @@
-# Core Scientific Computing
-numpy==2.1.1
+# Core Scientific Computing - COMPATIBLE VERSIONS
+numpy==1.26.4  # Latest stable <2.0 for pytensor compatibility
 pandas==2.2.2
-scipy==1.14.1
+scipy==1.13.1  # Latest <1.14 for pytensor
 scikit-learn==1.5.2
 
 # Statistical Analysis
 statsmodels==0.14.2
 pingouin==0.5.4  # For effect sizes and power analysis
-pymc==5.16.2  # Bayesian analysis
+pymc==5.16.2  # Bayesian analysis (requires numpy<2.0)
 
-# API Clients
-openai==1.45.0
+# API Clients - FIXED VERSIONS TO AVOID PROXY BULLSHIT
+openai==1.35.7  # Last version before proxy issues
 anthropic==0.34.2
 google-generativeai==0.7.2
+httpx==0.24.1  # Specific version that works
 
 # Data Management
 pydantic==2.9.1
@@ -25,7 +26,6 @@ seaborn==0.13.2
 plotly==5.24.0
 
 # Experiment Tracking
-wandb==0.17.9
 tqdm==4.66.5
 
 # Testing & Validation
@@ -36,3 +36,8 @@ pytest-cov==5.0.0
 tenacity==9.0.0  # For API retry logic
 joblib==1.4.2  # Parallel processing
 loguru==0.7.2  # Better logging
+
+# Additional for API work
+aiohttp==3.10.5  # Async HTTP
+backoff==2.2.1  # Exponential backoff for retries
+ratelimit==2.2.1  # Rate limiting

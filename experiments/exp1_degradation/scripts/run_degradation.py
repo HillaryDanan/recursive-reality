@@ -1,107 +1,178 @@
+#!/usr/bin/env python3
 """
-Experiment 1: Information Degradation Through Interpretation Layers
-Tests Shannon's (1948) information theory applied to LLM cascades
+Information Degradation Through Interpretation Layers
+Testing Shannon's information theory (1948) on recursive interpretation
 """
+
+import asyncio
+import sys
 import os
 import json
-import asyncio
-from typing import Dict, List, Tuple
-import numpy as np
 import pandas as pd
 from datetime import datetime
 from pathlib import Path
-import sys
-sys.path.append(str(Path(__file__).parent.parent.parent))
+import argparse
+from typing import Dict, List, Tuple
+import numpy as np
+
+# Add project root to path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
 
 from utils.api_handlers import LLMHandler
-from utils.metrics import calculate_accuracy, semantic_similarity
-from utils.data_loader import load_ground_truth
-import logging
+from utils.metrics import calculate_similarity, calculate_accuracy
+from loguru import logger
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Configure logging
+logger.add("experiments/exp1_degradation/logs/experiment_{time}.log", 
+           rotation="100 MB", 
+           level="INFO")
 
 class DegradationExperiment:
     """
-    Test information degradation through serial interpretation.
-    Based on: Shannon, C. E. (1948). A mathematical theory of communication.
+    Tests information degradation through recursive interpretation layers.
+    Based on Shannon (1948) information theory and Bartlett (1932) serial reproduction.
     """
     
-    def __init__(self, models: List[str] = ['gpt-4', 'claude-3', 'gemini-pro']):
-        self.models = models
-        self.llm = LLMHandler()
-        self.layers = 5  # Number of interpretation layers
+    def __init__(self, n_facts: int = 100, n_layers: int = 5, pilot: bool = False):
+        self.n_facts = n_facts if not pilot else 10
+        self.n_layers = n_layers
+        self.pilot = pilot
+        self.handler = LLMHandler()
         self.results = []
         
-    def create_degradation_prompt(self, info: str, layer: int) -> str:
-        """Generate prompts for each interpretation layer."""
-        if layer == 0:
-            return f"State this fact precisely: {info}"
-        else:
-            return f"Summarize this information in your own words: {info}"
+        logger.info(f"Initialized experiment: n_facts={self.n_facts}, n_layers={n_layers}, pilot={pilot}")
+        
+    async def load_ground_truth(self) -> pd.DataFrame:
+        """Load scientific facts from ground truth dataset"""
+        path = Path("data/ground_truth/scientific_facts.csv")
+        df = pd.read_csv(path)
+        
+        if self.pilot:
+            # Stratified sample for pilot: 2 from each category
+            df = df.groupby('category').head(2)
+            logger.info(f"Pilot mode: Using {len(df)} facts")
+        
+        return df
     
-    async def run_cascade(self, 
-                         fact: str, 
-                         ground_truth: str,
-                         model: str) -> Dict:
-        """Run information through interpretation cascade."""
+    async def run_single_cascade(self, fact: str, fact_id: int, model: str) -> List[Dict]:
+        """
+        Run a single fact through n_layers of interpretation
+        Following serial reproduction paradigm (Bartlett, 1932)
+        """
         cascade_results = []
-        current_info = fact
+        current_text = fact
         
-        for layer in range(self.layers):
-            prompt = self.create_degradation_prompt(current_info, layer)
-            response = await self.llm.query(model, prompt)
+        for layer in range(self.n_layers):
+            prompt = f"""Please paraphrase the following scientific fact in your own words, 
+            maintaining accuracy while expressing it differently:
             
-            # Measure accuracy against ground truth
-            accuracy = calculate_accuracy(response, ground_truth)
-            similarity = semantic_similarity(response, ground_truth)
+            {current_text}
             
-            cascade_results.append({
-                'layer': layer,
-                'response': response,
-                'accuracy': accuracy,
-                'semantic_similarity': similarity,
-                'length': len(response.split())
-            })
+            Paraphrased version:"""
             
-            current_info = response  # Feed forward to next layer
-        
-        return {
-            'model': model,
-            'fact': fact,
-            'ground_truth': ground_truth,
-            'cascade': cascade_results,
-            'timestamp': datetime.now().isoformat()
-        }
-    
-    async def run_experiment(self, facts_df: pd.DataFrame):
-        """Run full experiment across all models and facts."""
-        logger.info(f"Starting degradation experiment with {len(facts_df)} facts")
-        
-        for idx, row in facts_df.iterrows():
-            for model in self.models:
-                result = await self.run_cascade(
-                    row['fact'], 
-                    row['ground_truth'],
-                    model
+            try:
+                # Query the model
+                response = await self.handler.query(
+                    model=model,
+                    prompt=prompt,
+                    temperature=0.1  # Low temp for consistency
                 )
-                self.results.append(result)
                 
-                if idx % 10 == 0:
-                    logger.info(f"Processed {idx}/{len(facts_df)} facts")
+                # Store results for this layer
+                cascade_results.append({
+                    'fact_id': fact_id,
+                    'model': model,
+                    'layer': layer + 1,
+                    'input_text': current_text,
+                    'output_text': response,
+                    'timestamp': datetime.now().isoformat()
+                })
+                
+                # Use output as input for next layer
+                current_text = response
+                
+                logger.debug(f"Fact {fact_id}, Model {model}, Layer {layer+1} complete")
+                
+            except Exception as e:
+                logger.error(f"Error in cascade for fact {fact_id}, layer {layer}: {e}")
+                break
+                
+        return cascade_results
+    
+    async def run_experiment(self):
+        """Main experiment loop"""
+        logger.info("Starting degradation experiment")
+        
+        # Load ground truth
+        facts_df = await self.load_ground_truth()
+        
+        # Models to test
+        models = ['gpt-4', 'claude-3-5-sonnet-20241022', 'gemini-2.5-flash']
+        
+        # Run cascades for each fact and model
+        for idx, row in facts_df.iterrows():
+            fact = row['fact']
+            fact_id = row['fact_id']
+            
+            logger.info(f"Processing fact {fact_id}/{len(facts_df)}")
+            
+            for model in models:
+                cascade_results = await self.run_single_cascade(fact, fact_id, model)
+                self.results.extend(cascade_results)
+                
+                # Small delay to respect rate limits
+                await asyncio.sleep(0.5)
         
         # Save results
-        output_path = Path('../data/exp1_results.json')
-        with open(output_path, 'w') as f:
+        await self.save_results()
+        
+    async def save_results(self):
+        """Save experimental results"""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        # Save raw results as JSON
+        results_dir = Path("experiments/exp1_degradation/results")
+        results_dir.mkdir(exist_ok=True)
+        
+        output_file = results_dir / f"degradation_{'pilot' if self.pilot else 'full'}_{timestamp}.json"
+        
+        with open(output_file, 'w') as f:
             json.dump(self.results, f, indent=2)
         
-        logger.info(f"Results saved to {output_path}")
-        return self.results
+        logger.info(f"Results saved to {output_file}")
+        
+        # Create DataFrame for analysis
+        df = pd.DataFrame(self.results)
+        csv_file = results_dir / f"degradation_{'pilot' if self.pilot else 'full'}_{timestamp}.csv"
+        df.to_csv(csv_file, index=False)
+        
+        logger.info(f"CSV saved to {csv_file}")
+        
+        # Quick summary statistics
+        if len(df) > 0:
+            logger.info(f"Total data points: {len(df)}")
+            logger.info(f"Models tested: {df['model'].unique()}")
+            logger.info(f"Layers completed: {df['layer'].max()}")
 
-if __name__ == "__main__":
-    # Load ground truth facts
-    facts = pd.read_csv('../../../data/ground_truth/scientific_facts.csv')
+async def main():
+    """Main entry point"""
+    parser = argparse.ArgumentParser(description='Run information degradation experiment')
+    parser.add_argument('--pilot', action='store_true', help='Run pilot with n=10')
+    parser.add_argument('--n_facts', type=int, default=100, help='Number of facts to test')
+    parser.add_argument('--n_layers', type=int, default=5, help='Number of interpretation layers')
+    
+    args = parser.parse_args()
     
     # Run experiment
-    exp = DegradationExperiment()
-    asyncio.run(exp.run_experiment(facts))
+    experiment = DegradationExperiment(
+        n_facts=args.n_facts,
+        n_layers=args.n_layers,
+        pilot=args.pilot
+    )
+    
+    await experiment.run_experiment()
+    
+    logger.info("Experiment complete!")
+
+if __name__ == "__main__":
+    asyncio.run(main())
