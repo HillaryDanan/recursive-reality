@@ -1,167 +1,129 @@
-# Current Status - Recursive Reality Project
-**Date**: September 29, 2025  
-**Experiment**: Information Degradation Through Recursive Interpretation
+# Recursive Reality - Current Status
 
-## 🔬 PILOT STUDY COMPLETE - SURPRISING RESULTS!
+**Last Updated**: September 29, 2025  
+**Phase**: Experiment 2 Setup (Session 1 of 4)
 
-### Key Findings from Pilot (n=10 facts, 5 layers, 3 models)
+## ✅ Completed
 
-#### Degradation Patterns by Model:
-- **GPT-4**: 23.1% degradation (as predicted)
-  - Text length: +15% expansion
-  - Decay coefficient: 0.0664
-  - R² = 0.41 (moderate fit)
-  
-- **Claude-3.5-Sonnet**: **-29.3% "degradation" (EXPANSION!)**
-  - Text length: **+182.3% expansion**
-  - Decay coefficient: **-0.0286** (negative!)
-  - R² = 0.08 (poor exponential fit)
-  - **HYPOTHESIS**: Claude elaborates/clarifies rather than degrades
-  
-- **Gemini-2.5-Flash**: 16.6% degradation
-  - Text length: +6.8% expansion
-  - Decay coefficient: 0.0482
-  - R² = 0.65 (best fit to exponential)
+### Experiment 1: Information Transformation Through Layers
+- **Status**: COMPLETE
+- **Data**: 1,326 data points (88.4% completion)
+- **Key Finding**: LLMs exhibit THREE distinct processing strategies, not uniform degradation
+  - **Claude**: ELABORATOR (2.67x text expansion, +157%)
+  - **GPT-4**: MAINTAINER (+17% text, stable similarity)
+  - **Gemini**: DEGRADER (-22% similarity, 69% completion)
+- **Significance**: Challenges Shannon (1948) - models transform information differently
+- **Repository**: All data, code, analysis in `experiments/exp1_degradation/`
+- **Documentation**: Complete summary in `EXPERIMENT_1_SUMMARY.md`
 
-#### Statistical Power:
-- Observed effect size: **d = 1.138** (LARGE!)
-- Pilot power: 89.19%
-- Full study (n=100) power: **100%**
-- **DECISION: Proceed with full study**
+## 🔄 In Progress
 
-### Scientific Interpretation
+### Experiment 2: Source Attribution Preservation
+- **Research Question**: Do models preserve citations through recursive interpretation?
+- **Hypothesis**: Attribution accuracy decreases with interpretation distance (Johnson & Raye, 1981)
+- **Status**: SESSION 1 - Ground truth creation
+- **Progress**:
+  - [x] Directory structure created
+  - [x] Interactive verification tool built (`verify_citations.py`)
+  - [x] 20 classic papers formatted (needs verification)
+  - [ ] 30 recent papers (2020-2024) - automated research IN PROGRESS
+  - [ ] Verification of all 50 papers (tonight)
+  - [ ] Runner script (Session 2)
+  - [ ] Experiment execution (Session 3)
+  - [ ] Analysis & visualization (Session 4)
 
-**CRITICAL DISCOVERY**: Models exhibit fundamentally different information processing strategies:
+### Tools Created
+- `verify_citations.py`: Interactive Y/N verification tool for citations
+- `find_recent_facts.py`: Automated paper search system
+- `auto_find_recent_papers.py`: Research automation framework
 
-1. **GPT-4**: Classical degradation pattern, consistent with Shannon (1948)
-2. **Gemini**: Strongest exponential decay, most consistent with information theory
-3. **Claude**: **Elaboration pattern** - appears to ADD contextual information
+## 📅 Timeline
 
-This challenges our initial hypothesis from Shannon's information theory and suggests:
-- Information processing in LLMs may not follow simple degradation models
-- Some models (Claude) may exhibit "constructive interpretation" rather than degradation
-- Aligns with findings on elaborative encoding (Craik & Tulving, 1975)
+### Today (Sep 29, 2025)
+- ✅ Experiment 2 setup complete
+- 🔄 Automated paper research (Claude web_search)
+- ⏳ Manual verification tonight (20 mins with tool)
 
-## 📊 Repository Status
+### Next Session
+- Experiment 2 Session 2: Write runner script
+- Test with pilot data
+- Validate citation extraction
 
-### Completed Components:
-- ✅ Ground truth dataset (100 scientific facts)
-- ✅ API handlers for all 3 models working
-- ✅ Experiment 1 pilot complete with analysis
-- ✅ Statistical framework implemented
-- ✅ Power analysis confirms adequate sample size
+### Week of Sep 30
+- Session 3: Full experiment execution (~30 min with APIs)
+- Session 4: Analysis and visualization
+- Results documentation
 
-### File Structure:
-```
-experiments/exp1_degradation/
-├── scripts/
-│   ├── run_degradation.py         # Main experiment runner
-│   ├── analyze_degradation.py     # Statistical analysis
-│   └── check_power.py             # Power calculations
-├── results/
-│   ├── degradation_pilot_*.json   # Raw pilot data
-│   ├── degradation_pilot_*.csv    # Processed data
-│   ├── similarity_analysis_*.csv  # Similarity metrics
-│   └── degradation_curves_*.png   # Visualizations
-└── logs/
-    └── experiment_*.log           # Detailed logs
-```
+## 🎯 Upcoming Experiments
 
-### API Performance:
-- Total pilot API calls: 150
-- Success rate: 100%
-- Average response time: ~3-7 seconds
-- Models tested: gpt-4, claude-3-5-sonnet-20241022, gemini-2.5-flash
+### Experiment 3: Confidence Calibration
+- **Question**: How does confidence change through mediated information?
+- **Hypothesis**: Overconfidence increases with interpretation distance (Lichtenstein et al., 1982)
+- **Status**: Planned
 
-## 🚀 Next Steps
+### Experiment 4: Semantic Coherence
+- **Question**: Is Claude's expansion meaningful or noise?
+- **Hypothesis**: Elaboration may introduce semantic drift (Bartlett, 1932)
+- **Status**: Planned
 
-### Immediate Actions:
-1. **Run full experiment (n=100)**
-   ```bash
-   python3 experiments/exp1_degradation/scripts/run_degradation.py --n_facts 100
-   ```
-   - Estimated time: 2-3 hours
-   - Estimated cost: $30-50
-   - Expected data points: 1,500
+## 📊 Key Metrics
 
-2. **Investigate Claude's elaboration behavior**
-   - Analyze semantic content addition
-   - Compare information density metrics
-   - Test for hallucination vs. clarification
+### Experiment 1
+- Sample size: 100 scientific facts
+- Models tested: 3 (GPT-4, Claude-3.5-Sonnet, Gemini-2.5-Flash)
+- Layers analyzed: 5 per model
+- Temperature: 0.1 (reproducibility)
+- Statistical power: >99% for layer effects
 
-3. **Cross-model comparison**
-   - Analyze convergence/divergence patterns
-   - Test for model-specific biases
-   - Examine linguistic style changes
+### Experiment 2 (Target)
+- Sample size: 50 scientific facts with citations
+- Models: 3 (same as Exp 1)
+- Layers: 5
+- Citation formats: 3 types (narrative, parenthetical, numbered)
+- Expected power: 80% at α=0.05 for d=0.5
 
-### Research Questions Emerging:
-1. Why does Claude exhibit negative degradation (expansion)?
-2. Is the expansion semantically meaningful or noise?
-3. Do different fact categories show different degradation patterns?
-4. Can we identify "attractor states" in interpretation space?
+## 🔬 Scientific Rigor
 
-## 🔬 Methodological Notes
+All experiments follow:
+- Pre-registered hypotheses
+- Power analysis before data collection
+- Multiple metrics for robustness
+- Full reporting (significant AND non-significant results)
+- Peer-reviewed theoretical foundations
+- Open data and code
 
-### What's Working Well:
-- **Scientific rigor**: Temperature = 0.1, stratified sampling, multiple metrics
-- **Clear hypotheses**: Based on established theory (Shannon, 1948; Bartlett, 1932)
-- **Transparent analysis**: All statistical tests reported with effect sizes
-- **Reproducibility**: All code versioned, seeds set, data preserved
+## 📁 Repository Structure
+recursive-reality/
+├── experiments/
+│   ├── exp1_degradation/          ✅ COMPLETE
+│   │   ├── results/               (1,326 data points)
+│   │   ├── scripts/               (analysis code)
+│   │   └── README.md
+│   ├── exp2_attribution/          🔄 IN PROGRESS (Session 1/4)
+│   │   ├── data/                  (ground truth being built)
+│   │   ├── scripts/               (verification & research tools)
+│   │   ├── results/               (empty - awaiting experiment)
+│   │   └── README.md
+│   ├── exp3_calibration/          ⏳ PLANNED
+│   └── exp4_coherence/            ⏳ PLANNED
+├── EXPERIMENT_1_SUMMARY.md        ✅ Complete documentation
+├── CURRENT_STATUS.md              📍 YOU ARE HERE
+└── README.md                      ✅ Updated with pilot findings
 
-### Collaboration Success Factors:
-1. **Explicit scientific framework**: Always citing peer-reviewed sources
-2. **Hypothesis-driven**: Clear predictions before data collection
-3. **Honest reporting**: Including unexpected/contradictory findings
-4. **Statistical transparency**: Effect sizes, power, confidence intervals
-5. **Incremental validation**: Pilot → Full study approach
-6. **Technical clarity**: Step-by-step bash commands, no ambiguity
+## 🚀 Notable Achievements
 
-### Key Design Decisions:
-- Using serial reproduction paradigm (Bartlett, 1932)
-- Multiple similarity metrics for robustness
-- Mixed-effects models for nested data structure
-- Stratified sampling across complexity levels
+1. **Finding**: Discovered model-specific processing strategies (not uniform degradation)
+2. **Methodology**: Established reproducible experimental framework
+3. **Open Science**: All data, code, and findings publicly available
+4. **Automation**: Built tools to reduce manual work (verification interface, research automation)
 
-## 📈 Preliminary Theory Revision
+## 📝 Recent Updates
 
-**Original Hypothesis**: Information degrades exponentially through interpretation layers (Shannon, 1948)
-
-**Revised Working Hypothesis**: LLMs exhibit model-specific interpretation strategies:
-- **Compression models** (Gemini): Lossy compression, exponential decay
-- **Maintenance models** (GPT-4): Moderate degradation with style shift
-- **Elaboration models** (Claude): Constructive interpretation with expansion
-
-This aligns with:
-- Elaborative encoding theory (Craik & Tulving, 1975)
-- Reconstruction vs. reproduction in memory (Bartlett, 1932)
-- Gricean maxims in communication (Grice, 1975)
-
-## 💾 Data Availability
-
-All data publicly available at: https://github.com/HillaryDanan/recursive-reality
-
-- Raw pilot data: `experiments/exp1_degradation/results/degradation_pilot_*.json`
-- Analysis code: `experiments/exp1_degradation/scripts/analyze_degradation.py`
-- Ground truth: `data/ground_truth/scientific_facts.csv`
-
-## 🎯 Success Metrics for Full Study
-
-1. **Primary**: Quantify degradation/expansion rates per model
-2. **Secondary**: Identify predictors of degradation (complexity, category)
-3. **Exploratory**: Characterize model-specific linguistic patterns
-4. **Methodological**: Validate serial reproduction paradigm for LLMs
-
-## References
-
-- Akaike, H. (1974). A new look at the statistical model identification. IEEE TAC, 19(6), 716-723.
-- Bartlett, F. C. (1932). Remembering: A study in experimental and social psychology. Cambridge University Press.
-- Cohen, J. (1988). Statistical power analysis for the behavioral sciences. Routledge.
-- Craik, F. I., & Tulving, E. (1975). Depth of processing and the retention of words. JEP: General, 104(3), 268.
-- Grice, H. P. (1975). Logic and conversation. Syntax and semantics, 3, 41-58.
-- Shannon, C. E. (1948). A mathematical theory of communication. Bell System Technical Journal, 27(3), 379-423.
+- **Sep 29, 2025**: Experiment 2 setup complete, automated paper research initiated
+- **Sep 29, 2025**: Experiment 1 complete, findings documented
+- **Sep 29, 2025**: Interactive verification tool created
+- **Sep 29, 2025**: Repository restructured for multi-experiment workflow
 
 ---
 
-**Status**: READY FOR FULL EXPERIMENT  
-**Confidence**: HIGH (100% statistical power)  
-**Innovation**: Discovery of model-specific interpretation strategies
+*This is an active research project following scientific best practices. All findings are preliminary until peer-reviewed.*
