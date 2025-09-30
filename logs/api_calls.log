@@ -3501,3 +3501,172 @@ tenacity.RetryError: RetryError[<Future at 0x1068e99a0 state=finished raised Not
 2025-09-29 14:27:04.356 | INFO     | __main__:save_results:154 - Models tested: ['gpt-4' 'claude-3-5-sonnet-20241022' 'gemini-2.5-flash']
 2025-09-29 14:27:04.357 | INFO     | __main__:save_results:155 - Layers completed: 5
 2025-09-29 14:27:04.357 | INFO     | __main__:main:175 - Experiment complete!
+2025-09-30 14:16:55.639 | INFO     | __main__:main:256 - ======================================================================
+2025-09-30 14:16:55.640 | INFO     | __main__:main:257 - EXPERIMENT 2: SOURCE ATTRIBUTION PRESERVATION
+2025-09-30 14:16:55.640 | INFO     | __main__:main:258 - ======================================================================
+2025-09-30 14:16:55.640 | INFO     | __main__:main:259 - Research Question: Do models preserve citations through layers?
+2025-09-30 14:16:55.640 | INFO     | __main__:main:260 - Hypothesis: Attribution accuracy decreases with distance (Johnson & Raye, 1981)
+2025-09-30 14:16:55.640 | INFO     | __main__:main:261 - 
+2025-09-30 14:16:55.640 | INFO     | __main__:main:262 - Mode: PILOT
+2025-09-30 14:16:55.640 | INFO     | __main__:main:263 - Facts: 3
+2025-09-30 14:16:55.640 | INFO     | __main__:main:264 - Models: gpt-4, claude-3-5-sonnet-20241022, gemini-2.5-flash
+2025-09-30 14:16:55.640 | INFO     | __main__:main:265 - Layers per fact: 5
+2025-09-30 14:16:55.640 | INFO     | __main__:main:266 - Temperature: 0.1
+2025-09-30 14:16:55.640 | INFO     | __main__:main:267 - Total API calls: 45
+2025-09-30 14:16:55.640 | INFO     | __main__:main:268 - Estimated time: ~3 minutes
+2025-09-30 14:16:55.641 | INFO     | __main__:main:269 - ======================================================================
+2025-09-30 14:16:55.641 | INFO     | __main__:main:270 - 
+2025-09-30 14:16:55.655 | INFO     | utils.api_handlers:_initialize_clients:94 - ✓ OpenAI client initialized successfully
+2025-09-30 14:16:55.666 | INFO     | utils.api_handlers:_initialize_clients:116 - ✓ Anthropic client initialized successfully
+2025-09-30 14:16:56.166 | INFO     | utils.api_handlers:_initialize_clients:131 - Available Google models: ['models/embedding-gecko-001', 'models/gemini-2.5-pro-preview-03-25', 'models/gemini-2.5-flash-preview-05-20', 'models/gemini-2.5-flash', 'models/gemini-2.5-flash-lite-preview-06-17', 'models/gemini-2.5-pro-preview-05-06', 'models/gemini-2.5-pro-preview-06-05', 'models/gemini-2.5-pro', 'models/gemini-2.0-flash-exp', 'models/gemini-2.0-flash', 'models/gemini-2.0-flash-001', 'models/gemini-2.0-flash-exp-image-generation', 'models/gemini-2.0-flash-lite-001', 'models/gemini-2.0-flash-lite', 'models/gemini-2.0-flash-preview-image-generation', 'models/gemini-2.0-flash-lite-preview-02-05', 'models/gemini-2.0-flash-lite-preview', 'models/gemini-2.0-pro-exp', 'models/gemini-2.0-pro-exp-02-05', 'models/gemini-exp-1206', 'models/gemini-2.0-flash-thinking-exp-01-21', 'models/gemini-2.0-flash-thinking-exp', 'models/gemini-2.0-flash-thinking-exp-1219', 'models/gemini-2.5-flash-preview-tts', 'models/gemini-2.5-pro-preview-tts', 'models/learnlm-2.0-flash-experimental', 'models/gemma-3-1b-it', 'models/gemma-3-4b-it', 'models/gemma-3-12b-it', 'models/gemma-3-27b-it', 'models/gemma-3n-e4b-it', 'models/gemma-3n-e2b-it', 'models/gemini-flash-latest', 'models/gemini-flash-lite-latest', 'models/gemini-pro-latest', 'models/gemini-2.5-flash-lite', 'models/gemini-2.5-flash-image-preview', 'models/gemini-2.5-flash-preview-09-2025', 'models/gemini-2.5-flash-lite-preview-09-2025', 'models/gemini-robotics-er-1.5-preview', 'models/embedding-001', 'models/text-embedding-004', 'models/gemini-embedding-exp-03-07', 'models/gemini-embedding-exp', 'models/gemini-embedding-001', 'models/aqa', 'models/imagen-3.0-generate-002', 'models/imagen-4.0-generate-preview-06-06', 'models/imagen-4.0-ultra-generate-preview-06-06', 'models/imagen-4.0-generate-001', 'models/imagen-4.0-ultra-generate-001', 'models/imagen-4.0-fast-generate-001', 'models/veo-2.0-generate-001', 'models/veo-3.0-generate-preview', 'models/veo-3.0-fast-generate-preview', 'models/veo-3.0-generate-001', 'models/veo-3.0-fast-generate-001', 'models/gemini-2.5-flash-preview-native-audio-dialog', 'models/gemini-2.5-flash-exp-native-audio-thinking-dialog', 'models/gemini-2.0-flash-live-001', 'models/gemini-live-2.5-flash-preview', 'models/gemini-2.5-flash-live-preview', 'models/gemini-2.5-flash-native-audio-latest', 'models/gemini-2.5-flash-native-audio-preview-09-2025']
+2025-09-30 14:16:56.167 | INFO     | utils.api_handlers:_initialize_clients:135 - ✓ Google client initialized successfully with gemini-2.5-flash
+2025-09-30 14:16:56.168 | INFO     | __main__:load_facts:33 - Loading facts from experiments/exp2_attribution/data/facts_with_citations_50_verified.json
+2025-09-30 14:16:56.170 | INFO     | __main__:load_facts:38 - Loaded 50 verified facts
+2025-09-30 14:16:56.171 | INFO     | __main__:load_facts:39 - Verification method: systematic_claude_review
+2025-09-30 14:16:56.171 | INFO     | __main__:run_experiment:143 - PILOT MODE: Using 3 facts
+2025-09-30 14:16:56.172 | INFO     | __main__:run_experiment:162 - 
+======================================================================
+2025-09-30 14:16:56.172 | INFO     | __main__:run_experiment:163 - Starting gpt-4
+2025-09-30 14:16:56.172 | INFO     | __main__:run_experiment:164 - ======================================================================
+2025-09-30 14:16:56.173 | INFO     | __main__:run_experiment:170 - Fact 1/3: Einstein (1905)
+2025-09-30 14:16:56.173 | INFO     | __main__:run_single_fact:69 - Processing fact 1: Einstein (1905) with gpt-4
+2025-09-30 14:16:59.341 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 3.17s | 167 chars
+2025-09-30 14:16:59.342 | DEBUG    | __main__:run_single_fact:108 -   Layer 1: 167 chars
+2025-09-30 14:17:01.577 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.23s | 194 chars
+2025-09-30 14:17:01.579 | DEBUG    | __main__:run_single_fact:108 -   Layer 2: 194 chars
+2025-09-30 14:17:04.275 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.70s | 175 chars
+2025-09-30 14:17:04.275 | DEBUG    | __main__:run_single_fact:108 -   Layer 3: 175 chars
+2025-09-30 14:17:06.508 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.23s | 195 chars
+2025-09-30 14:17:06.509 | DEBUG    | __main__:run_single_fact:108 -   Layer 4: 195 chars
+2025-09-30 14:17:08.669 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.16s | 177 chars
+2025-09-30 14:17:08.670 | DEBUG    | __main__:run_single_fact:108 -   Layer 5: 177 chars
+2025-09-30 14:17:08.671 | INFO     | __main__:run_experiment:170 - Fact 2/3: Watson and Crick (1953)
+2025-09-30 14:17:08.671 | INFO     | __main__:run_single_fact:69 - Processing fact 2: Watson and Crick (1953) with gpt-4
+2025-09-30 14:17:10.426 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 1.76s | 146 chars
+2025-09-30 14:17:10.427 | DEBUG    | __main__:run_single_fact:108 -   Layer 1: 146 chars
+2025-09-30 14:17:14.686 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 4.26s | 142 chars
+2025-09-30 14:17:14.687 | DEBUG    | __main__:run_single_fact:108 -   Layer 2: 142 chars
+2025-09-30 14:17:16.945 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.26s | 146 chars
+2025-09-30 14:17:16.946 | DEBUG    | __main__:run_single_fact:108 -   Layer 3: 146 chars
+2025-09-30 14:17:20.526 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 3.58s | 146 chars
+2025-09-30 14:17:20.527 | DEBUG    | __main__:run_single_fact:108 -   Layer 4: 146 chars
+2025-09-30 14:17:23.028 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.50s | 152 chars
+2025-09-30 14:17:23.029 | DEBUG    | __main__:run_single_fact:108 -   Layer 5: 152 chars
+2025-09-30 14:17:23.031 | INFO     | __main__:run_experiment:170 - Fact 3/3: Shannon (1948)
+2025-09-30 14:17:23.031 | INFO     | __main__:run_single_fact:69 - Processing fact 3: Shannon (1948) with gpt-4
+2025-09-30 14:17:25.532 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.50s | 182 chars
+2025-09-30 14:17:25.534 | DEBUG    | __main__:run_single_fact:108 -   Layer 1: 182 chars
+2025-09-30 14:17:27.819 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.28s | 206 chars
+2025-09-30 14:17:27.820 | DEBUG    | __main__:run_single_fact:108 -   Layer 2: 206 chars
+2025-09-30 14:17:30.661 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.84s | 215 chars
+2025-09-30 14:17:30.662 | DEBUG    | __main__:run_single_fact:108 -   Layer 3: 215 chars
+2025-09-30 14:17:32.930 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.27s | 242 chars
+2025-09-30 14:17:32.930 | DEBUG    | __main__:run_single_fact:108 -   Layer 4: 242 chars
+2025-09-30 14:17:35.508 | INFO     | utils.api_handlers:_log_call:313 - API call: gpt-4 | 2.58s | 246 chars
+2025-09-30 14:17:35.509 | DEBUG    | __main__:run_single_fact:108 -   Layer 5: 246 chars
+2025-09-30 14:17:35.514 | INFO     | __main__:run_experiment:213 - 
+✅ Completed gpt-4
+2025-09-30 14:17:35.515 | INFO     | __main__:run_experiment:214 -    Results: experiments/exp2_attribution/results/attribution_gpt-4_pilot_20250930_141735.json
+2025-09-30 14:17:35.516 | INFO     | __main__:run_experiment:215 -    Completed: 3/3 facts
+2025-09-30 14:17:35.517 | INFO     | __main__:run_experiment:162 - 
+======================================================================
+2025-09-30 14:17:35.517 | INFO     | __main__:run_experiment:163 - Starting claude-3-5-sonnet-20241022
+2025-09-30 14:17:35.518 | INFO     | __main__:run_experiment:164 - ======================================================================
+2025-09-30 14:17:35.518 | INFO     | __main__:run_experiment:170 - Fact 1/3: Einstein (1905)
+2025-09-30 14:17:35.518 | INFO     | __main__:run_single_fact:69 - Processing fact 1: Einstein (1905) with claude-3-5-sonnet-20241022
+2025-09-30 14:17:38.297 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.78s | 415 chars
+2025-09-30 14:17:38.297 | DEBUG    | __main__:run_single_fact:108 -   Layer 1: 415 chars
+2025-09-30 14:17:41.916 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.62s | 553 chars
+2025-09-30 14:17:41.918 | DEBUG    | __main__:run_single_fact:108 -   Layer 2: 553 chars
+2025-09-30 14:17:46.323 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 4.40s | 764 chars
+2025-09-30 14:17:46.324 | DEBUG    | __main__:run_single_fact:108 -   Layer 3: 764 chars
+2025-09-30 14:17:50.229 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.90s | 824 chars
+2025-09-30 14:17:50.230 | DEBUG    | __main__:run_single_fact:108 -   Layer 4: 824 chars
+2025-09-30 14:17:52.568 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.34s | 330 chars
+2025-09-30 14:17:52.569 | DEBUG    | __main__:run_single_fact:108 -   Layer 5: 330 chars
+2025-09-30 14:17:52.571 | INFO     | __main__:run_experiment:170 - Fact 2/3: Watson and Crick (1953)
+2025-09-30 14:17:52.572 | INFO     | __main__:run_single_fact:69 - Processing fact 2: Watson and Crick (1953) with claude-3-5-sonnet-20241022
+2025-09-30 14:17:55.338 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.77s | 454 chars
+2025-09-30 14:17:55.339 | DEBUG    | __main__:run_single_fact:108 -   Layer 1: 454 chars
+2025-09-30 14:17:58.931 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.59s | 648 chars
+2025-09-30 14:17:58.932 | DEBUG    | __main__:run_single_fact:108 -   Layer 2: 648 chars
+2025-09-30 14:18:00.772 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 1.84s | 260 chars
+2025-09-30 14:18:00.774 | DEBUG    | __main__:run_single_fact:108 -   Layer 3: 260 chars
+2025-09-30 14:18:02.717 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 1.94s | 198 chars
+2025-09-30 14:18:02.718 | DEBUG    | __main__:run_single_fact:108 -   Layer 4: 198 chars
+2025-09-30 14:18:04.348 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 1.63s | 204 chars
+2025-09-30 14:18:04.350 | DEBUG    | __main__:run_single_fact:108 -   Layer 5: 204 chars
+2025-09-30 14:18:04.351 | INFO     | __main__:run_experiment:170 - Fact 3/3: Shannon (1948)
+2025-09-30 14:18:04.351 | INFO     | __main__:run_single_fact:69 - Processing fact 3: Shannon (1948) with claude-3-5-sonnet-20241022
+2025-09-30 14:18:06.681 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 2.33s | 427 chars
+2025-09-30 14:18:06.684 | DEBUG    | __main__:run_single_fact:108 -   Layer 1: 427 chars
+2025-09-30 14:18:10.181 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 3.50s | 598 chars
+2025-09-30 14:18:10.182 | DEBUG    | __main__:run_single_fact:108 -   Layer 2: 598 chars
+2025-09-30 14:18:14.937 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 4.75s | 1015 chars
+2025-09-30 14:18:14.938 | DEBUG    | __main__:run_single_fact:108 -   Layer 3: 1015 chars
+2025-09-30 14:18:20.614 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 5.68s | 1138 chars
+2025-09-30 14:18:20.615 | DEBUG    | __main__:run_single_fact:108 -   Layer 4: 1138 chars
+2025-09-30 14:18:25.096 | INFO     | utils.api_handlers:_log_call:313 - API call: claude-3-5-sonnet-20241022 | 4.48s | 980 chars
+2025-09-30 14:18:25.099 | DEBUG    | __main__:run_single_fact:108 -   Layer 5: 980 chars
+2025-09-30 14:18:25.103 | INFO     | __main__:run_experiment:213 - 
+✅ Completed claude-3-5-sonnet-20241022
+2025-09-30 14:18:25.103 | INFO     | __main__:run_experiment:214 -    Results: experiments/exp2_attribution/results/attribution_claude-3-5-sonnet-20241022_pilot_20250930_141825.json
+2025-09-30 14:18:25.104 | INFO     | __main__:run_experiment:215 -    Completed: 3/3 facts
+2025-09-30 14:18:25.104 | INFO     | __main__:run_experiment:162 - 
+======================================================================
+2025-09-30 14:18:25.105 | INFO     | __main__:run_experiment:163 - Starting gemini-2.5-flash
+2025-09-30 14:18:25.105 | INFO     | __main__:run_experiment:164 - ======================================================================
+2025-09-30 14:18:25.105 | INFO     | __main__:run_experiment:170 - Fact 1/3: Einstein (1905)
+2025-09-30 14:18:25.105 | INFO     | __main__:run_single_fact:69 - Processing fact 1: Einstein (1905) with gemini-2.5-flash
+2025-09-30 14:18:40.784 | ERROR    | utils.api_handlers:_query_google:292 - Google API error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+2025-09-30 14:18:53.460 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 28.35s | 837 chars
+2025-09-30 14:18:53.461 | DEBUG    | __main__:run_single_fact:108 -   Layer 1: 837 chars
+2025-09-30 14:18:57.086 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 3.62s | 291 chars
+2025-09-30 14:18:57.087 | DEBUG    | __main__:run_single_fact:108 -   Layer 2: 291 chars
+2025-09-30 14:19:11.514 | ERROR    | utils.api_handlers:_query_google:292 - Google API error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+2025-09-30 14:19:31.625 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 34.54s | 1092 chars
+2025-09-30 14:19:31.626 | DEBUG    | __main__:run_single_fact:108 -   Layer 3: 1092 chars
+2025-09-30 14:19:39.471 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.84s | 364 chars
+2025-09-30 14:19:39.472 | DEBUG    | __main__:run_single_fact:108 -   Layer 4: 364 chars
+2025-09-30 14:19:53.805 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 14.33s | 446 chars
+2025-09-30 14:19:53.806 | DEBUG    | __main__:run_single_fact:108 -   Layer 5: 446 chars
+2025-09-30 14:19:53.809 | INFO     | __main__:run_experiment:170 - Fact 2/3: Watson and Crick (1953)
+2025-09-30 14:19:53.809 | INFO     | __main__:run_single_fact:69 - Processing fact 2: Watson and Crick (1953) with gemini-2.5-flash
+2025-09-30 14:20:08.857 | ERROR    | utils.api_handlers:_query_google:292 - Google API error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+2025-09-30 14:20:21.914 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 28.10s | 1063 chars
+2025-09-30 14:20:21.917 | DEBUG    | __main__:run_single_fact:108 -   Layer 1: 1063 chars
+2025-09-30 14:20:34.767 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 12.85s | 350 chars
+2025-09-30 14:20:34.768 | DEBUG    | __main__:run_single_fact:108 -   Layer 2: 350 chars
+2025-09-30 14:20:52.790 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 18.02s | 139 chars
+2025-09-30 14:20:52.790 | DEBUG    | __main__:run_single_fact:108 -   Layer 3: 139 chars
+2025-09-30 14:21:00.878 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 8.09s | 341 chars
+2025-09-30 14:21:00.879 | DEBUG    | __main__:run_single_fact:108 -   Layer 4: 341 chars
+2025-09-30 14:21:15.659 | ERROR    | utils.api_handlers:_query_google:292 - Google API error: Invalid operation: The `response.text` quick accessor requires the response to contain a valid `Part`, but none were returned. Please check the `candidate.safety_ratings` to determine if the response was blocked.
+2025-09-30 14:21:34.988 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 34.11s | 294 chars
+2025-09-30 14:21:34.988 | DEBUG    | __main__:run_single_fact:108 -   Layer 5: 294 chars
+2025-09-30 14:21:34.989 | INFO     | __main__:run_experiment:170 - Fact 3/3: Shannon (1948)
+2025-09-30 14:21:34.989 | INFO     | __main__:run_single_fact:69 - Processing fact 3: Shannon (1948) with gemini-2.5-flash
+2025-09-30 14:21:51.274 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 16.28s | 68 chars
+2025-09-30 14:21:51.274 | DEBUG    | __main__:run_single_fact:108 -   Layer 1: 68 chars
+2025-09-30 14:21:53.730 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 2.46s | 181 chars
+2025-09-30 14:21:53.731 | DEBUG    | __main__:run_single_fact:108 -   Layer 2: 181 chars
+2025-09-30 14:21:59.932 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 6.20s | 506 chars
+2025-09-30 14:21:59.932 | DEBUG    | __main__:run_single_fact:108 -   Layer 3: 506 chars
+2025-09-30 14:22:07.520 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 7.59s | 395 chars
+2025-09-30 14:22:07.521 | DEBUG    | __main__:run_single_fact:108 -   Layer 4: 395 chars
+2025-09-30 14:22:18.806 | INFO     | utils.api_handlers:_log_call:313 - API call: gemini-2.5-flash | 11.29s | 402 chars
+2025-09-30 14:22:18.808 | DEBUG    | __main__:run_single_fact:108 -   Layer 5: 402 chars
+2025-09-30 14:22:18.813 | INFO     | __main__:run_experiment:213 - 
+✅ Completed gemini-2.5-flash
+2025-09-30 14:22:18.813 | INFO     | __main__:run_experiment:214 -    Results: experiments/exp2_attribution/results/attribution_gemini-2.5-flash_pilot_20250930_142218.json
+2025-09-30 14:22:18.814 | INFO     | __main__:run_experiment:215 -    Completed: 3/3 facts
+2025-09-30 14:22:18.817 | INFO     | __main__:main:287 - 
+2025-09-30 14:22:18.817 | INFO     | __main__:main:288 - ======================================================================
+2025-09-30 14:22:18.817 | INFO     | __main__:main:289 - ✅ EXPERIMENT COMPLETE
+2025-09-30 14:22:18.818 | INFO     | __main__:main:290 - ======================================================================
+2025-09-30 14:22:18.818 | INFO     | __main__:main:291 - Results saved to: experiments/exp2_attribution/results
+2025-09-30 14:22:18.818 | INFO     | __main__:main:292 - 
+2025-09-30 14:22:18.819 | INFO     | __main__:main:293 - Next steps:
+2025-09-30 14:22:18.819 | INFO     | __main__:main:294 - 1. Check results files in experiments/exp2_attribution/results/
+2025-09-30 14:22:18.819 | INFO     | __main__:main:295 - 2. Run analysis: python3 experiments/exp2_attribution/scripts/analyze_attribution.py
+2025-09-30 14:22:18.819 | INFO     | __main__:main:296 - 3. Git commit results
